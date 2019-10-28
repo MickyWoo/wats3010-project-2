@@ -1,11 +1,11 @@
-/* HTML Section First  */ 
+/* HTML Section First  */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
 
-  :root {
+:root {
     --main-bg-color: white;
     --main-text-color: #353535;
     --container-bg-color: rgb(238, 238, 238);
@@ -30,7 +30,7 @@
     --calc-table-border: #ddd;
     --math-color: white;
     --math-bg-color: black;
-  }
+}
 
 /* fonts  and style */
 h1,
@@ -43,48 +43,51 @@ footer,
 h1 a,
 li a {
     /* never seen this var () before */
-  font-family: var(--font-serif-titles);
+    font-family: var(--font-serif-titles);
 }
+
 figcaption {
-  font-family: var(--font-serif-titles);
-  font-size: .7rem
+    font-family: var(--font-serif-titles);
+    font-size: .7rem
 }
+
 p {
-  font-family: var(--font-serif-text);
+    font-family: var(--font-serif-text);
 }
 
 .brand a {
     color: var(--brand-color);
     text-decoration: none;
-  }
+}
 
-  .container {
+.container {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 5px;
-  }
-
-
-  /* to each container it adds the grey background color to the MAIN background color being white
-  and then the spacing to show the white. */
-  .single-col-container>*,
-.container>* {
-  color: var(--main-text-color);
-  line-height: 1.5;
-  background: var(--container-bg-color);
 }
+
+
+/* to each container it adds the grey background color to the MAIN background color being white
+  and then the spacing to show the white. */
+.single-col-container>*,
+.container>* {
+    color: var(--main-text-color);
+    line-height: 1.5;
+    background: var(--container-bg-color);
+}
+
 .single-col-container nav,
 .container nav {
-  padding: 10px;
+    padding: 10px;
 }
 
 .container>aside,
 section {
-  padding: 20px;
+    padding: 20px;
 }
 
 footer {
-  padding: 0 10px;
+    padding: 0 10px;
 }
 
 
@@ -92,296 +95,300 @@ footer {
 
 .single-col-container nav,
 .container nav {
-  background-color: var(--nav-bg-color);
+    background-color: var(--nav-bg-color);
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-  color: var(--nav-text-color);
-  text-decoration: none;
+    color: var(--nav-text-color);
+    text-decoration: none;
 }
 
 nav a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a.toggle {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 nav .active {
-  background-color: var(--nav-hover-color);
-  height: 50px;
-  line-height: 50px;
+    background-color: var(--nav-hover-color);
+    height: 50px;
+    line-height: 50px;
 }
+
 nav li {
     text-align: center;
-  }
-  
-  nav .active a {
+}
+
+nav .active a {
     color: var(--nav-active);
-  }
+}
 
 
-  /* MEDIA section to scale for laptops to phone sizes */
+/* MEDIA section to scale for laptops to phone sizes */
 
-  @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
 
     /* grid */
     .single-col-container,
     .container {
-      grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
-  
+
     /* specific item styles */
     .single-col-container,
     .container header,
     .container nav,
     .container footer {
-      grid-column: span 4;
+        grid-column: span 4;
     }
-  
+
     .container section {
-      grid-column: span 3;
+        grid-column: span 3;
     }
-  
+
     /* nav styles, i was right for inline block.. */
     nav ul li {
-      display: inline-block;
-      width: 100px;
-  
+        display: inline-block;
+        width: 100px;
+
     }
-  
+
     /* hide toggle */
     .toggle {
-      display: none;
+        display: none;
     }
-  
-    .header {
-      width: 100%;
-      height: auto;
-      background-image: url("../images/fibonacci-numbers.png");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-    }
-  
-  }
 
-  /* mason Layout.  */
-  .golden-mason img {
+    .header {
+        width: 100%;
+        height: auto;
+        background-image: url("../images/fibonacci-numbers.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+}
+
+/* mason Layout.  */
+.golden-mason img {
     width: 100%;
-  }
-  
-  .golden-mason article {
+}
+
+.golden-mason article {
     padding: 20px;
     border: 1px solid var(--mason-border-color);
     border-radius: 5px;
     background-color: var(masonry-bg-color);
-  }
-  
-  .golden-mason a:link,
-  .golden-mason a:visited {
+}
+
+.golden-mason a:link,
+.golden-mason a:visited {
     color: var(--masonry-link);
-  }
-  
-  .golden-mason h1 {
+}
+
+.golden-mason h1 {
     margin-top: 0;
     margin-left: 0.75rem;
-  }
-  
-  .golden-mason {
+}
+
+.golden-mason {
     column-count: 3;
     columns: 250px;
     column-gap: 10px;
-  }
-  
-  .golden-mason article {
+}
+
+.golden-mason article {
     break-inside: avoid-column;
     margin-bottom: 1rem;
-  }
-  
-  .golden-mason p {
+}
+
+.golden-mason p {
     font-size: .9rem;
-  }
+}
 
 
-  /* styleing the icon Bar */
+/* styleing the icon Bar */
 
-  /* makes it right side and fixed to it */
-  .icon-bar {
+/* makes it right side and fixed to it */
+.icon-bar {
     position: fixed;
     top: 1%;
     right: 4%;
-  }
-  
-  /* remove bullet points */
-  icon-bar ul {
+}
+
+/* remove bullet points */
+icon-bar ul {
     list-style-type: none;
-  }
-  
-  /* inline block because i dont know  */
-  .icon-bar li {
+}
+
+/* inline block because i dont know  */
+.icon-bar li {
     display: inline-block;
-  }
-  
-  .icon-bar a {
+}
+
+.icon-bar a {
     display: block;
     text-align: center;
     padding: 5px;
     transition: all 0.3s ease;
     font-size: 20px;
-  }
-  
-  .icon-bar a:hover {
+}
+
+.icon-bar a:hover {
     background-color: var(--icon-hover);
-  }
-  
-  .facebook {
+}
+
+.facebook {
     background-color: var(--facebook-bg);
     color: var(--icon-color)
-  }
-  
-  .twitter {
+}
+
+.twitter {
     background-color: var(--twitter-bg);
     color: var(--icon-color);
-  }
-  
-  .github {
+}
+
+.github {
     background-color: var(--github-bg);
     color: var(--icon-color);
-  }
+}
 
 
 
-  /* credits */ 
-  .credits ul {
+/* credits */
+.credits ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .credits a {
+}
+
+.credits a {
     font-size: .7em;
     text-decoration: none;
     color: var(--main-text-color);
-  }
-  
-  .credits a:hover {
+}
+
+.credits a:hover {
     background-color: var(--credit-hover-bg);
     color: var(--credit-hover-color);
     cursor: pointer;
-  }
+}
 
 
 
-  /* fib styles  */
-  .fib-aside {
+/* fib styles  */
+.fib-aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .fib-aside img {
+}
+
+.fib-aside img {
     width: 180px;
     height: auto;
-  }
+}
 
-  /* style fib table  */
-  .calc-table table {
+/* style fib table  */
+.calc-table table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     border: 1px solid var(--calc-table-border);
-  }
-  
-  .calc-table th,
-  .cacl-table td {
+}
+
+.calc-table th,
+.cacl-table td {
     border: 1px solid var(--calc-table-border);
     text-align: left;
     padding: 8px;
-  }
-  
-  .calc-table tr:nth-child(even) {
-    background-color: var(--calc-table-border);
-  }
-  .calc-table caption {
-    caption-side:top;
-    text-align: left;
-    font-style: italic; 
-  }
+}
 
-   /* style math */
-   .math {
+.calc-table tr:nth-child(even) {
+    background-color: var(--calc-table-border);
+}
+
+.calc-table caption {
+    caption-side: top;
+    text-align: left;
+    font-style: italic;
+}
+
+/* style math */
+.math {
     margin: 20px auto;
     padding: 10px 30px;
     width: 200px;
     background-color: var(--math-bg-color);
     color: var(--math-color);
-  }
+}
 
 
-  /* style iframe  */
+/* style iframe  */
 
-  .resp-container {
+.resp-container {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
-  }
-  
-  .resp-iframe {
+}
+
+.resp-iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: 0;
-  }
+}
 
 
-  /* containers for iframes */
-  .frame-container {
+/* containers for iframes */
+.frame-container {
     margin: 0 auto;
     width: 80%;
-  }
-  
-  .frame-container {
+}
+
+.frame-container {
     text-align: center;
-  }
-  
-  
-  .audio-container {
+}
+
+
+.audio-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  
+
     background-color: var(--nav-text-color);
     align-items: center;
-  }
-  @media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 600px) {
     .audio-container {
-      grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
+
     .audio-container iframe {
-      margin-top: 20px;
+        margin-top: 20px;
     }
-  }
+}
 
 
-  /* about */
+/* about */
 
-  .learning-objectives {
+.learning-objectives {
     margin: 20px;
-  }
-  
-  .learning-objectives li {
+}
+
+.learning-objectives li {
     font-family: var(--font-serif-titles);
-  }
-  
-  .xkcd-container img {
+}
+
+.xkcd-container img {
     width: 320px;
     height: auto;
-  }
+}
